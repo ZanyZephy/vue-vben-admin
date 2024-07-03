@@ -16,6 +16,14 @@ const comp: AppRouteModule = {
 
   children: [
     {
+      path: 'ag-grid',
+      name: 'ag-grid',
+      component: () => import('@/views/demo/comp/ag-grid/index.vue'),
+      meta: {
+        title: 'ag-grid',
+      },
+    },
+    {
       path: 'basic',
       name: 'BasicDemo',
       component: () => import('@/views/demo/comp/button/index.vue'),

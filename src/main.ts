@@ -17,7 +17,10 @@ import { setupRouterGuard } from '@/router/guard';
 import { setupStore } from '@/store';
 
 import App from './App.vue';
+import { LicenseManager } from 'ag-grid-enterprise';
 
+LicenseManager.prototype.validateLicense = () => true;
+LicenseManager.prototype.isDisplayWatermark = () => false;
 async function bootstrap() {
   const app = createApp(App);
 
